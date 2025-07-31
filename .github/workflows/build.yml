@@ -2,8 +2,6 @@ name: Build LaTeX Document
 
 on:
   workflow_dispatch:
-
-on:
   push:
     paths:
       - '**.tex'
