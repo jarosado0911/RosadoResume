@@ -1,0 +1,29 @@
+name: Build LaTeX Document
+
+on:
+  push:
+    paths:
+      - '**.tex'
+      - '**.bib'
+      - '**.sty'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install LaTeX
+      uses: dante-ev/latex-action@latest
+      with:
+        root_file: main.tex  # Replace with your main tex file if different
+        latexmk_use_lualatex: false
+
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-pdf
+        path: main.pdf
