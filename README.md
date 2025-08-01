@@ -2,10 +2,10 @@
 ![Build LaTeX PDF](https://github.com/jarosado0911/RosadoResume/actions/workflows/build.yml/badge.svg)
 ![Build README PDF](https://github.com/jarosado0911/RosadoResume/actions/workflows/readme.yml/badge.svg)
 
+## Below are links to downloading various versions of my resume
+- `LaTex` version📄 [Download latest resume (PDF)](https://github.com/jarosado0911/RosadoResume/raw/main/main.pdf) [needs to be updated but it is pretty recent]
 
-📄 [Download latest resume (PDF)](https://github.com/jarosado0911/RosadoResume/raw/main/main.pdf) [needs to be updated but it is pretty recent]
-
-📄 [Download PDF version of this README](https://github.com/jarosado0911/RosadoResume/raw/main/readme-resume.pdf)
+- `README.md` version📄 [Download PDF version of this README](https://github.com/jarosado0911/RosadoResume/raw/main/readme-resume.pdf)
 
 ## Below is my comprehensive resume in `.md` format
 JAMES MICHAEL ROSADO  
