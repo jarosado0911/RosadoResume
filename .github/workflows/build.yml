@@ -23,22 +23,22 @@ jobs:
     - name: Install LaTeX
       uses: dante-ev/latex-action@latest
       with:
-        root_file: main.tex  # Replace with your main tex file if different
+        root_file: main.tex
         latexmk_use_lualatex: false
+
+    - name: Rename PDF
+      run: mv main.pdf full_resume.pdf
 
     - name: Commit and push PDF to repository
       if: github.ref == 'refs/heads/main'
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add main.pdf
+        git add full_resume.pdf
         git commit -m "Auto-update compiled PDF"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Rename PDF
-      run: mv main.pdf full_resume.pdf
 
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
