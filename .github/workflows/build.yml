@@ -1,40 +1,44 @@
-name: BuildLatex
+name: Build LaTex Resume
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+  push:
+    paths:
+      - 'main.tex'
+      - '**.bib'
+      - '**.sty'
+  pull_request:
+
+permissions:
+  contents: write
 
 jobs:
-  build-latex:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Set up LaTeX environment
-        run: sudo apt-get install -y texlive-full
+    - name: Install LaTeX and Compile Teaching Resume
+      uses: dante-ev/latex-action@latest
+      with:
+        root_file: main.tex
+        latexmk_use_lualatex: false
 
-      - name: Compile LaTeX to PDF
-        run: |
-          pdflatex -interaction=nonstopmode -halt-on-error -output-directory . main.tex
+    - name: Commit and push PDF to repository
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add main.pdf
+        git commit -m "Auto-update compiled Main Resume PDF"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Configure git
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-
-      - name: Add and commit PDF
-        run: |
-          git add full_resume.pdf
-          git commit -m "Auto-update compiled PDF" || echo "No changes to commit"
-
-      - name: Pull latest changes
-        run: git pull --rebase origin main
-
-      - name: Push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: git push
+    - name: Upload Resume PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: main-pdf
+        path: main.pdf
