@@ -1,51 +1,40 @@
-name: Build LaTeX Document
+name: BuildLatex
 
 on:
-  workflow_dispatch:
   push:
-    paths:
-      - '**.tex'
-      - '**.bib'
-      - '**.sty'
-  pull_request:
-
-permissions:
-  contents: write
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-latex:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # <-- this allows git pull to work
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Install LaTeX
-      uses: dante-ev/latex-action@latest
-      with:
-        root_file: main.tex
-        latexmk_use_lualatex: false
+      - name: Set up LaTeX environment
+        run: sudo apt-get install -y texlive-full
 
-    - name: Rename PDF
-      run: mv main.pdf full_resume.pdf
+      - name: Compile LaTeX to PDF
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory . main.tex
 
-    - name: Commit and push PDF to repository
-      if: github.ref == 'refs/heads/main'
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git pull --rebase origin main
-        git add full_resume.pdf
-        git commit -m "Auto-update compiled PDF" || echo "No changes to commit"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
 
+      - name: Add and commit PDF
+        run: |
+          git add full_resume.pdf
+          git commit -m "Auto-update compiled PDF" || echo "No changes to commit"
 
-    - name: Upload PDF artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: resume-pdf
-        path: full_resume.pdf
+      - name: Pull latest changes
+        run: git pull --rebase origin main
+
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push
