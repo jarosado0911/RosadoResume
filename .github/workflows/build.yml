@@ -23,6 +23,17 @@ jobs:
         root_file: main.tex  # Replace with your main tex file if different
         latexmk_use_lualatex: false
 
+    - name: Commit and push PDF to repository
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add main.pdf
+        git commit -m "Auto-update compiled PDF"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
