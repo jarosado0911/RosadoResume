@@ -41,6 +41,7 @@ Maryland, USA
 - Applied Research Mathematician conducting research and actively coding implementations across different branches of the agency.
 - Actively publishes work within the agency with viewership covering several divisions of the DoD.
 - Holds TS/SCI clearance.
+  
 Jan. 2024 - Aug. 2024 National Security Agency, Operations Software Engineer,  
 Maryland, USA
 - Updated code and followed the code review process when implementing programming structures.
@@ -49,6 +50,7 @@ Maryland, USA
 - Discovered structures which efficiently utilize HPC memory and cpu resources.
 - Code was released for IC use and for expediting mission outcomes.
 - Received Monetary Award for contributing to improved software performance at the agency.
+  
 Sep. 2023 - Jan. 2024 National Security Agency, Engagement and Policy  
 Maryland, USA
 - Implemented article recommendation systems via known ML algorithms using Python modules.
