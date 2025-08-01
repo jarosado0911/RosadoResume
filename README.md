@@ -2,6 +2,7 @@
 ![Build LaTeX PDF](https://github.com/jarosado0911/RosadoResume/actions/workflows/build.yml/badge.svg)
 
 📄 [Download latest resume (PDF)](https://github.com/jarosado0911/RosadoResume/raw/main/main.pdf) [needs to be updated but it is pretty recent]
+
 📄 [Download PDF version of this README](https://github.com/jarosado0911/RosadoResume/raw/main/readme-resume.pdf)
 
 ## Below is my comprehensive resume in `.md` format
