@@ -34,8 +34,9 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
+        git pull --rebase origin main
         git add full_resume.pdf
-        git commit -m "Auto-update compiled PDF"
+        git commit -m "Auto-update compiled PDF" || echo "No changes to commit"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
