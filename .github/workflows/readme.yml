@@ -18,13 +18,12 @@ jobs:
         uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_path: 'README.md'
-          output_dir: './output'
+          output_dir: './'
           build_pdf: true
           build_html: false
 
-      - name: Rename and move to root
-        run: |
-          mv ./output/README.pdf ./readme-resume.pdf
+      - name: Rename PDF
+        run: mv README.pdf readme-resume.pdf
 
       - name: Commit PDF to repository
         run: |
