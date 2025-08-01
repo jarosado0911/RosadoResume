@@ -169,7 +169,7 @@ Gloucester County, NJ
 - Utilized manipulatives to teach grade school topics through high school grade topics.
 - Provided mentoring on career goals and potential fields of study.
 
-PUBLICATIONS
+**PUBLICATIONS**
 -	Rosado, James Michael (2022). Doctoral Dissertation: “Ultrastructural Neuronal Modeling of Calcium Dynamics under Transcranial Magnetic Stimulation.” Temple University Libraries.
 -	Rosado, James Michael (2016). Master’s Thesis: “Partitions of Finite Frames.” ProQuest Theses and Dissertations, Rowan University, Glassboro, NJ.
 -	Rosado J. M., Borole P.R., Neal M., and Queisser G. (2023). “Neuronal Resilience and Calcium Signaling Pathways in the Context of Synapse Loss and Calcium Leaks: A computational and modeling study and implications for Alzheimer’s Disease.” In SIAM Journal on Applied Mathematics (Vol. 83, Issue 6, pp. 2418-2442). Society for Industrial & Applied Mathematics (SIAM).
@@ -178,13 +178,13 @@ PUBLICATIONS
 -	Rosado J. M., Nguyen H. D., and Cao L., “Partitions of Equiangular Tight Frames,” Linear Algebra and its Applications. Vol. 526, pp. 95-120, March 2017.
 -	Rosado J. M., and Osler T., “A table of definite integrals from the marriage of power and Fourier series,” Scientia, Vol. 26, pp. 77-82, August 2015.
 
-DEVELOPED SOFTWARE
+**DEVELOPED SOFTWARE**
 - 2018 – 2022, C2M2, Temple University, Neuro-VISOR (Virtual Interactive Simulation of Reality), applications in computational neuroscience, real-time simulation of neuron electrical dynamics in a VR environment, https://github.com/c2m2/Neuro-VISOR
 - 2018 – 2019, OpitzLab, University of MinnesotaNeuron Modeling for TMS (NeMo-TMS), a toolbox for multi-scale modeling of the effects of Transcranial Magnetic Stimulation on single-neurons, https://github.com/OpitzLab/NeMo-TMS
 - 2021 – 2023, Queisser Group, Temple University, CalcSim, MatLab simulation code for modeling intracellular calcium dynamics of single neurons, https://github.com/NeuroBox3D/CalcSim
 - 2022 to Present, Queisser Group, Temple University, PythonNeuronMesh, software for generating surface meshes from 1D models of neurons, https://github.com/jarosado0911/PythonNeuronMeshes
 
-UNDERGRADUATE RESEARCH  
+**UNDERGRADUATE RESEARCH**  
 Summer 2005 Undergraduate Engineering Research  
 College of Engineering, Rowan University, Glassboro, NJ
 - Designed transistor-based replica of leech heart interneuron.
@@ -202,7 +202,7 @@ Universidad Catolica Del Norte, Coquimbo, Chile
 - Analyzed and translated ChemCAD software to develop cultivation systems for the growth of shellfish.
 - Learned about the farming process of shellfish.
 
-AWARDS  
+**AWARDS**  
 DoD/NSA Awards
 - 2025 Monetary Award for contributing to improved software performance at the agency.
 - 2024 Monetary Award for software engineering performance on developing and implementing article recommendation software.
@@ -230,7 +230,7 @@ Rowan University Awards
 Rutgers University Awards
 - 2003 – 2007 Edward J. Bloustein Distinguished Scholar
 
-PRESENTATIONS
+**PRESENTATIONS**
 - June 2022, J. Rosado, “Ultrastructural Neuronal Modeling of Calcium Dynamics Under Transcranial Magnetic Stimulation.” Doctoral Defense, Temple University, Philadelphia, PA.
 - Oct. 2021, J. Rosado, “Neuron Dendritic Spines: Modeling Calcium Communication.” Temple University College of Science and Technology Research Mixer, Temple University Philadelphia, PA.
 - May 2021, J. Rosado, “Hodgkin-Huxley Conductance Based Model: From 1D to 3D.” Temple University Numerical PDEs Course, Temple University, Philadelphia, PA.
@@ -251,7 +251,7 @@ PRESENTATIONS
 - May 2015, J. Rosado and T. Osler, “A table of definite integrals from the marriage of power and Fourier series.” At Sigma Xi Research Symposium, St. Joseph’s University, Philadelphia, PA.
 - Jan. 2015, J. Rosado and T. Osler, “A table of definite integrals from the marriage of power and Fourier series.” At Joint Mathematics Meeting, San Antonio, TX.
 
-SKILLS
+**SKILLS**
 - Microsoft Office: MS Word, MS PowerPoint, MS Excel
 - Software: LaTex, MatLab, Mathematica, Sage, Maple, C/C++, Python, LUA, JAVA, C#, Unity3D
 - Collaboration Tools: Skype and Zoom
@@ -265,7 +265,7 @@ SKILLS
 - Designing curriculum, lessons, and assessments to reflect 21st century skills
 - Utilizing interactive white boards
 
-PROFESSIONAL AFFILIATIONS
+**PROFESSIONAL AFFILIATIONS**
 -	Sep. 2018 – June 2022, Temple University SIAM Chapter President
 -	Sep. 2018 – June 2022, Temple University SIAM Chapter Member
 -	Sep. 2018 – June 2022, SIAM Member and journal subscriber
@@ -277,11 +277,11 @@ PROFESSIONAL AFFILIATIONS
 -	Sep. 2008 – June 2017, Clearview Regional Education Association Union Member
 -	Sep. 2006 – Sep. 2008, IEEE member and journal subscriber
 
-LANGUAGES
+**LANGUAGES**
 - English: Native Language
 - Spanish: Conversational and written
 
-HOBBIES
+**HOBBIES**
 - Reading books: neuroscience, mathematics, sci-fi, history poetry, biographical, philosophy, high fantasy
 - Writing mathematical articles, writing poetry, drawing and painting
 - Personal fitness, running, weightlifting, hiking,
