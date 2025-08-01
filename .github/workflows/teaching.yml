@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'teaching_resume.tex'
+      - 'teachingCV.tex'
       - '**.bib'
       - '**.sty'
   pull_request:
@@ -23,11 +23,11 @@ jobs:
     - name: Install LaTeX and Compile Teaching Resume
       uses: dante-ev/latex-action@latest
       with:
-        root_file: teaching_resume.tex
+        root_file: teachingCV.tex
         latexmk_use_lualatex: false
 
     - name: Rename PDF
-      run: mv teaching_resume.pdf teaching_resume_final.pdf
+      run: mv teaching_resume.pdf teaching_resume.pdf
 
     - name: Commit and push PDF to repository
       if: github.ref == 'refs/heads/main'
