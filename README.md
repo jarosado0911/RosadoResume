@@ -4,7 +4,7 @@
 ![Build README PDF](https://github.com/jarosado0911/RosadoResume/actions/workflows/readme.yml/badge.svg)
 
 ## Below are links to downloading various versions of my resume
-- `LaTex` version📄 [Download latest resume (PDF)](https://github.com/jarosado0911/RosadoResume/blob/main/full_resume.pdf) [needs to be updated but it is pretty recent]
+- `LaTex` version📄 [Download latest resume (PDF)](https://github.com/jarosado0911/RosadoResume/blob/main/main.pdf) [needs to be updated but it is pretty recent]
   
 - `LaTex` version📄 [Download latest teaching resume (PDF)](https://github.com/jarosado0911/RosadoResume/blob/main/teachingCV.pdf) [needs to be updated but it is pretty recent]
 
