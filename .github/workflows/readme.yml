@@ -1,46 +1,37 @@
-name: Build README PDF
+name: Convert README to PDF
 
 on:
+  workflow_dispatch:
   push:
     paths:
-      - 'README.md'
-  workflow_dispatch:
-
-permissions:
-  contents: write
+      - README.md
 
 jobs:
-  build-readme-pdf:
+  convert:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Convert README.md to PDF
-      uses: baileyjm02/markdown-to-pdf@v1
-      with:
-        input_path: 'README.md'
-        output_dir: '.'
-        build_pdf: true
-        build_html: false
+      - name: Convert README.md to PDF
+        uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_path: 'README.md'
+          output_dir: './output'
+          build_pdf: true
+          build_html: false
 
-    - name: Rename output file
-      run: mv README.pdf readme-resume.pdf
+      - name: Rename and move to root
+        run: |
+          mv ./output/README.pdf ./readme-resume.pdf
 
-    - name: Commit and push PDF to repo
-      if: github.ref == 'refs/heads/main'
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add readme-resume.pdf
-        git commit -m "Auto-generated readme-resume.pdf"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Upload PDF artifact (optional)
-      uses: actions/upload-artifact@v4
-      with:
-        name: readme-resume-pdf
-        path: readme-resume.pdf
+      - name: Commit PDF to repository
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add readme-resume.pdf
+          git commit -m "Auto-update README PDF"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
