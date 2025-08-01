@@ -1,0 +1,47 @@
+name: Build Teaching Resume
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'teaching_resume.tex'
+      - '**.bib'
+      - '**.sty'
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install LaTeX and Compile Teaching Resume
+      uses: dante-ev/latex-action@latest
+      with:
+        root_file: teaching_resume.tex
+        latexmk_use_lualatex: false
+
+    - name: Rename PDF
+      run: mv teaching_resume.pdf teaching_resume_final.pdf
+
+    - name: Commit and push PDF to repository
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add teaching_resume_final.pdf
+        git commit -m "Auto-update compiled Teaching Resume PDF"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload Teaching Resume PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: teaching-resume-pdf
+        path: teaching_resume_final.pdf
