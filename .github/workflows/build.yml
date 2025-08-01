@@ -37,8 +37,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Rename PDF
+      run: mv main.pdf full_resume.pdf
+
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
         name: resume-pdf
-        path: main.pdf
+        path: full_resume.pdf
