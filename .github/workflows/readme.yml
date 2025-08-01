@@ -5,7 +5,10 @@ on:
   push:
     paths:
       - README.md
-
+      
+permissions:
+  contents: write
+  
 jobs:
   convert:
     runs-on: ubuntu-latest
