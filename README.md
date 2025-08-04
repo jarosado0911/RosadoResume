@@ -140,6 +140,18 @@ Rowan University, Glassboro, NJ
 - Algorithms were published in academic journals.
 - Work presented at the Joint Mathematics Meeting (JMM).
 
+Jan. 2025 – June 2025 Adjunct Professor  
+Towson University, Towson, MD
+- Adjunct Professor of instruction for evening course.
+- Instructed Math 105: Mathematical Ideas
+- Designed lectures, lecture notes, and interactive lessons.
+- Designed/Graded assessments which include examinations, quizzes, and daily assessments.
+- Provided abundant office hours before and after class.
+- Provided ample review sessions for examinations.
+- Provided frequent student feedback via email communications and website communications.
+- Maintained and updated BlackBoard website on a daily basis.
+- Utilized announcement features on BlackBoard to provide course updates.
+
 Sep. 2016 – June 2017 Adjunct Professor  
 Rowan University, Glassboro, NJ
 - Adjunct Professor of instruction for evening Calculus I courses.
